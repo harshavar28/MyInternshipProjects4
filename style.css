@@ -1,0 +1,170 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('prj1img.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  flex-direction: column;
+}
+
+.left-section,
+.middle-section,
+.right-section {
+  flex: 1;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.middle-section {
+  flex: 2;
+  overflow-y: auto;
+}
+
+.add-task input {
+  margin-bottom: 35px;
+  padding: 10px;
+}
+
+.add-task button {
+  margin-top: 15px;
+}
+
+.left-section:hover,
+.middle-section:hover,
+.right-section:hover {
+  transform: translateY(-10px);
+}
+
+h1 {
+  color: black;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.add-task,
+.filters,
+.sort {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input,
+select,
+button {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+button {
+  background-color: skyblue;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: aliceblue;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+  width: 100%;
+}
+
+.task-item:hover {
+  background-color: rgba(173, 216, 230, 0.5);
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.due-date,
+.category {
+  font-size: 14px;
+  color: black;
+  margin-right: 5px;
+}
+
+.due-date {
+  color: mediumblue;
+}
+
+.action-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.done-icon,
+.delete-icon,
+.edit-icon {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight:bold;
+}
+
+.done-icon:hover {
+  color: darkblue;
+}
+
+.delete-icon:hover {
+  color: red;
+}
+.edit-icon:hover {
+  color: royalblue;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    display: flex;
+  }
+
+  .left-section,
+  .right-section {
+    height: 100%;
+  }
+
+  .middle-section {
+    margin: 10px;
+    align-items: stretch;
+  }
+  .task-item {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
